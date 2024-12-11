@@ -55,8 +55,9 @@ def principal(page: ft.Page):
     ft.SafeArea(
         page.add(
             ft.AppBar(
-                title= ft.Text('Lista de Tarefas', text_align= ft.alignment.center),
-                bgcolor= ft.Colors.RED
+                title= ft.Text('Lista de Tarefas',),
+                bgcolor= ft.Colors.CYAN,
+                center_title= True # centraliza o titulo da AppBar
             ),
             ft.Column([
                 ft.Row([
