@@ -63,7 +63,8 @@ def principal(page: ft.Page):
                 ft.Row([
                     caixa_texto,
                     botao_add,
-                ])
+                ]),
+
             ])
     ))
 
