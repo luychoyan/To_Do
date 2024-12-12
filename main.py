@@ -42,6 +42,7 @@ def principal(page: ft.Page):
             caixa_texto.focus() # caixa de texto com foco
             caixa_texto.update()
 
+    botao_add = ft.ElevatedButton('Adicionar Tarefa', on_click= adiciona_tarefa, )
     caixa_texto = ft.TextField(label= 'O que vamos fazer hoje?')
     alerta_confirmar = ft.AlertDialog(
         modal= True,
@@ -51,7 +52,8 @@ def principal(page: ft.Page):
             ft.ElevatedButton('Cancelar', on_click= fechar_alerta)
         ]
     )
-    botao_add = ft.ElevatedButton('Adicionar Tarefa', on_click= adiciona_tarefa, )
+    
+    # renderiza na tela
     ft.SafeArea(
         page.add(
             ft.AppBar(
@@ -64,8 +66,8 @@ def principal(page: ft.Page):
                     caixa_texto,
                     botao_add,
                 ]),
-
             ])
-    ))
+        )
+    )
 
 ft.app(principal)
