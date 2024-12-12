@@ -47,8 +47,15 @@ def principal(page: ft.Page):
             caixa_texto.focus() # caixa de texto com foco
             caixa_texto.update()
 
-    botao_add = ft.ElevatedButton('Adicionar Tarefa', on_click= adiciona_tarefa, color= ft.Colors.CYAN, bgcolor= ft.Colors.WHITE,)
-    caixa_texto = ft.TextField(label= 'O que vamos fazer hoje?')
+    botao_add = ft.ElevatedButton(
+        text='Adicionar Tarefa', 
+        on_click= adiciona_tarefa, 
+        color= ft.Colors.CYAN, 
+        bgcolor= ft.Colors.WHITE,
+    )
+    caixa_texto = ft.TextField(
+        label= 'O que vamos fazer hoje?'
+    )
     alerta_confirmar = ft.AlertDialog(
         modal= True,
         title= ft.Text('Quer mesmo deletar esta tarefa?'),
